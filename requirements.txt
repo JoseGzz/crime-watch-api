@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+confluent-kafka
+databricks-sql-connector
+pydantic
