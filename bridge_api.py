@@ -61,7 +61,7 @@ async def report_crime(report: CrimeReport):
     
     try:
         if producer:
-            producer.produce('crime-reports-topic', key=report.user_id, value=value)
+            producer.produce('crime-reports', key=report.user_id, value=value)
             producer.flush()
             return {"status": "success", "message": "Crime reported to data pipeline"}
         else:
